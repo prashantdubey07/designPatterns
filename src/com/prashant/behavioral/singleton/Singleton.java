@@ -29,12 +29,16 @@ public class Singleton implements Serializable,Cloneable
 
 	/**
 	 * Constructor
+	 * throw InstantiationError Exception in case some one initializing instance using Reflection
 	 */
 	private Singleton() {
-
+			if(singleton != null)
+				throw new InstantiationError();
 	}
-
-	public synchronized static Singleton getInstance() {
+	
+	//either synchronized method or synchronized block
+	// for better concurrency use synchronized block
+	public static Singleton getInstance() {
 		//first check whether object is null or not
 		if (singleton == null) {
 			// if object is null then get lock on the object
