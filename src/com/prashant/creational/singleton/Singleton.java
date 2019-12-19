@@ -40,7 +40,7 @@ public class Singleton implements Serializable, Cloneable {
 	public static Singleton getInstance() {
 		// first check whether object is null or not
 		if (singleton == null) {
-			// if object is null then get lock on the object
+			// if object is null then get class level lock
 			synchronized (Singleton.class) {
 				// second check whether object is null or not
 				if (singleton == null) {
