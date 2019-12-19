@@ -41,7 +41,7 @@ public class Singleton implements Serializable, Cloneable {
 		// first check whether object is null or not
 		if (singleton == null) {
 			// if object is null then get lock on the object
-			synchronized (singleton) {
+			synchronized (Singleton.class) {
 				// second check whether object is null or not
 				if (singleton == null) {
 					// if its still null then create new Object
