@@ -3,7 +3,7 @@
  * This source code and documentation is copyrighted and owned by Voxify.
  * Use is subject to license terms. May not be distributed without authorization from Voxify.
  */
-package com.prashant.designPattern.behavioral.command;
+package com.prashant.behavioral.command;
 
 /**
  *
@@ -17,8 +17,8 @@ public class LightOnState  implements Command{
   }
   @Override
   public void execute() {
-    light.setState(true);
-    System.out.println("Whether light is on ? "+light.isState());
+    //light.setState(true);
+    //System.out.println("Whether light is on ? "+light.isState());
   }
 
 }

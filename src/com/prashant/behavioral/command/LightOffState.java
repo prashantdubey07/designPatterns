@@ -1,10 +1,11 @@
-package com.prashant.designPattern.behavioral.command;
+package com.prashant.behavioral.command;
+
 
 /**
 *
 * @author prashant.d
 */
-public class LightOffState implements Command{
+public class LightOffState implements Command {
   Light light;
   
   public LightOffState(Light light){
@@ -12,8 +13,8 @@ public class LightOffState implements Command{
   }
   @Override
   public void execute() {
-    light.setState(false);
-    System.out.println("Whether light is on ? "+light.isState());
+    //light.setState(false);
+    //System.out.println("Whether light is on ? "+light.isState());
   }
 
 }
